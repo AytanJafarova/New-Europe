@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35700361-F020-48B2-9850-EAEA0D0C6E37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewEurope</RootNamespace>
+    <AssemblyName>NewEurope</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogicLayer.cs" />
+    <Compile Include="CategoryClass.cs" />
+    <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="EmployeeInfo.cs" />
+    <Compile Include="EstateInfo.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewEuropeDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEuropeDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewOperation.cs" />
+    <Compile Include="NewUser.cs" />
+    <Compile Include="NewUserSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserSignUp.Designer.cs">
+      <DependentUpon>NewUserSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Category.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Customer.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Employee.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Operation.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Property.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Users.cs">
+      <DependentUpon>NewEuropeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserEnteredForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEnteredForm.Designer.cs">
+      <DependentUpon>UserEnteredForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs" />
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserSignUp.resx">
+      <DependentUpon>NewUserSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserEnteredForm.resx">
+      <DependentUpon>UserEnteredForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="NewEuropeDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewEuropeDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NewEuropeDB.edmx.diagram">
+      <DependentUpon>NewEuropeDB.edmx</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet.xsc">
+      <DependentUpon>NewEuropeDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet.xss">
+      <DependentUpon>NewEuropeDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet1.xsc">
+      <DependentUpon>NewEuropeDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet1.xss">
+      <DependentUpon>NewEuropeDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet2.xsc">
+      <DependentUpon>NewEuropeDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet2.xss">
+      <DependentUpon>NewEuropeDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet3.xsc">
+      <DependentUpon>NewEuropeDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet3.xss">
+      <DependentUpon>NewEuropeDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet4.xsc">
+      <DependentUpon>NewEuropeDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet4.xss">
+      <DependentUpon>NewEuropeDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet5.xsc">
+      <DependentUpon>NewEuropeDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet5.xss">
+      <DependentUpon>NewEuropeDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet6.xsc">
+      <DependentUpon>NewEuropeDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet6.xss">
+      <DependentUpon>NewEuropeDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet7.xsc">
+      <DependentUpon>NewEuropeDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet7.xss">
+      <DependentUpon>NewEuropeDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet8.xsc">
+      <DependentUpon>NewEuropeDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet8.xss">
+      <DependentUpon>NewEuropeDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet9.xsc">
+      <DependentUpon>NewEuropeDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="NewEuropeDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewEuropeDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewEuropeDBDataSet9.xss">
+      <DependentUpon>NewEuropeDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewEuropeDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NewEuropeDB.Context.cs</LastGenOutput>
+      <DependentUpon>NewEuropeDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="NewEuropeDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewEuropeDB.edmx</DependentUpon>
+      <LastGenOutput>NewEuropeDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
